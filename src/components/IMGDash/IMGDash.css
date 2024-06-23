@@ -1,0 +1,39 @@
+.prediction-result {
+  width: 80%;
+  opacity: 0.8;
+  padding: 1rem;
+  background: #1a1a1c;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  color: azure;
+}
+.prediction-result .result-info {
+  padding: 0.5rem;
+}
+.prediction-result .image-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.prediction-result .image-item {
+  margin: 0.5rem;
+  text-align: center;
+}
+.prediction-result .image-item img {
+  width: 100%;
+  border-radius: 0.25rem;
+  max-width: 15rem;
+  cursor: pointer;
+  transition: 0.25s;
+}
+.prediction-result .image-item img:hover {
+  transform: scale(1.05);
+}
+.prediction-result h3 {
+  letter-spacing: 0.15rem;
+}
+.prediction-result h3 span,
+.prediction-result h4 {
+  color: gold;
+}

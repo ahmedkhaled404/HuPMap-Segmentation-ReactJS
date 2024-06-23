@@ -1,0 +1,125 @@
+/*=========Header navigation bar=====*/
+header {
+  z-index: 999;
+  position: fixed;
+  width: 100%;
+}
+header nav {
+  position: relative;
+  backdrop-filter: blur(200px);
+  height: 4em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 150px;
+  transition: 0.5s ease;
+}
+header nav .navbar-toggler:focus {
+  border: none;
+  box-shadow: unset;
+}
+header .bg-dark {
+  --bs-bg-opacity: 1;
+  background-color: #000000 !important;
+}
+header nav .navbar-brand {
+  color: rgb(239, 243, 247);
+  font-size: 1em;
+  text-decoration: none;
+}
+header nav .navbar-brand:hover {
+  color: gold;
+  cursor: pointer;
+}
+header .nav-item a {
+  color: rgb(239, 243, 247);
+  font-size: 1em;
+  text-decoration: none;
+}
+header .nav-item .active-route a,
+header .nav-item a:hover {
+  color: gold;
+}
+/*=====Scroll bar=========*/
+header ::-webkit-scrollbar {
+  background: #fff;
+  /* width: 11px; */
+  width: 0px;
+  border-radius: 2em;
+}
+header ::-webkit-scrollbar-thumb {
+  background: #282f4e;
+  width: 100%;
+  border-radius: 2em;
+}
+
+header ::-webkit-scrollbar-thumb:hover {
+  background: #454f6d;
+}
+
+/*===============scroll indicator bar=======*/
+header .scroll-indicator-container {
+  width: 100%;
+  height: 5px;
+}
+header .scroll-indicator-bar {
+  background: #199fff;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 5px 25px #199fff, 0 5px 50px #199fff;
+}
+
+/*==========scroll bar=========*/
+header #scrollpath {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0.35rem;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.05);
+}
+header #progressbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 0.35rem;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  animation: animate 5s linear infinite;
+}
+header #progressbar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(30px);
+}
+header #progressbar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, #008aff, #00ffe7);
+  filter: blur(30px);
+}
+@media screen and (max-width: 992px) {
+  header nav .container-fluid {
+    background-color: #000000;
+  }
+}
+@keyframes animate {
+  0%,
+  100% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(360deg);
+  }
+}
